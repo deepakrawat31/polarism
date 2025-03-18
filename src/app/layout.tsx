@@ -1,30 +1,16 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
+import Header from "./components/Header";
 import "./globals.css";
 
-const kelson = localFont({
+const archia = localFont({
    src: [
       {
-         path: "../font/KelsonSans-Normal.woff2",
-         weight: "400",
-         style: "normal",
-      },
-      {
-         path: "../font/KelsonSans-Bold.woff2",
-         weight: "700",
-         style: "normal",
-      },
-   ],
-});
-const cervanttis = localFont({
-   src: [
-      {
-         path: "../font/Cervanttis.woff2",
+         path: "../font/Archia.woff2",
          weight: "400",
          style: "normal",
       },
    ],
-   variable: "--font-cervanttis",
 });
 
 export const metadata: Metadata = {
@@ -40,8 +26,9 @@ export default function RootLayout({
    return (
       <html lang="en">
          <body
-            className={`${kelson.className} ${cervanttis.variable} antialiased bg-norway-500`}
+            className={`${archia.className} antialiased bg-neutral-900 tracking-wide text-neutral-300`}
          >
+            <Header />
             {children}
          </body>
       </html>
