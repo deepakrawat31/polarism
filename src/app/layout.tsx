@@ -3,14 +3,23 @@ import localFont from "next/font/local";
 import Header from "./components/Header";
 import "./globals.css";
 
-const archia = localFont({
+const pitagon = localFont({
    src: [
       {
-         path: "../font/Archia.woff2",
+         path: "../font/PitagonSansMono.woff2",
+         style: "normal",
+      },
+   ],
+});
+const ampunsuhu = localFont({
+   src: [
+      {
+         path: "../font/Ampunsuhu.woff2",
          weight: "400",
          style: "normal",
       },
    ],
+   variable: "--font-ampunsuhu",
 });
 
 export const metadata: Metadata = {
@@ -26,7 +35,7 @@ export default function RootLayout({
    return (
       <html lang="en">
          <body
-            className={`${archia.className} antialiased bg-neutral-900 tracking-wide text-neutral-300`}
+            className={`${pitagon.className} ${ampunsuhu.variable} antialiased bg-neutral-900 text-neutral-300`}
          >
             <Header />
             {children}
