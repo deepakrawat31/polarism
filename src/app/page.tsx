@@ -1,7 +1,11 @@
+import Link from "next/link";
+
 export default function Home() {
-   return <main className="min-h-[40rem] p-4 md:p-8 flex flex-col items-center justify-center">
-         <h1 className="text-9xl font-ampunsuhu">polarism</h1>
-      <div className="max-w-3xl w-full flex flex-col gap-8">
-      </div>
-   </main>;
+  return (
+    <main className="flex min-h-[40rem] flex-col items-center justify-center gap-8 p-4 md:p-8">
+      <h1 className="font-ampunsuhu text-9xl">polarism</h1>
+      <p className="flex w-full max-w-3xl flex-col gap-8"></p>
+      <Link href={"/"}></Link>
+    </main>
+  );
 }
