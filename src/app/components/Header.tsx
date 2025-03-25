@@ -13,7 +13,7 @@ export default function Header() {
       <ul className="flex items-center gap-4">
         <li>
           <Link
-            href={"/"}
+            href={"/picture"}
             className="text-neutral-300/40 transition-colors duration-300 hover:text-neutral-300"
           >
             take picture
@@ -24,7 +24,7 @@ export default function Header() {
         </li>
         <li>
           <Link
-            href={"/"}
+            href={"/auth"}
             className="text-neutral-300/40 transition-colors duration-300 hover:text-neutral-300"
           >
             log in
